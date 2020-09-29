@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "omts-movie": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "omts-movie"
+    }
+  },
+  "defaultProject": "omts-movie",
+  "cli": {
+    "analytics": "44b239ee-babf-4e1d-9a5d-f5e3b4c36072"
+  }
 }

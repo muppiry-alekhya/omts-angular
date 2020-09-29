@@ -1,0 +1,28 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <div class="container">
+    <h1 align="center" style="text-emphasis-color: tomato;">Online Movie Tickets System</h1>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: antiquewhite;">
+      <a class="navbar-brand" href="">
+      </a>
+      <br><br><br>
+      <ul class="nav nav-pills ">
+      <li class="nav-item ">
+        <a class="nav-link" class="btn btn-outline-danger  btn-sm  mr-3" routerLink="/add-movie">Add Movie</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" class="btn btn-outline-danger btn-sm mr-3"  routerLink="/view-all-movies">View All Movies</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" class="btn btn-info  btn-sm  mr-3"  routerLink="admin-logout">Admin Logout</a>
+          <!-- <input type="submit" value="Admin logout" class="btn btn-primary"> -->
+
+      </li>
+    </ul>
+    </nav>
+    </div>
+    <router-outlet></router-outlet>
+    

@@ -1,0 +1,32 @@
+
+    <br>
+       <h3 style="color:black" align="center" >Movie Details</h3>
+<br>
+<div class="col-md-9 offset-2">
+    <table class="table table-striped" *ngIf="movieDetails && movieDetails.length>0">
+        <tr>
+            <th scope="col">Movie Id</th>
+            <th scope="col">Movie Name</th>
+            <th scope="col">Movie Genre</th>
+            <th scope="col">Movie Director</th>
+            <th scope="col">Language</th>
+            <th scope="col">Movie Length</th>
+            <th scope="col">Release Date</th>
+        </tr>
+        <tbody>
+            <tr *ngFor="let m of movieDetails">
+                <td>{{m.movieId}}</td>
+         <td>{{m.movieName}}</td>
+         <td>{{m.movieGenre}}</td>
+         <td>{{m.movieDirector}}</td>
+         <td>{{m.languages}}</td>
+         <td>{{m.movieLength}}</td>
+         <td>{{m.movieReleaseDate}}</td>
+         <td><button class="btn btn-primary" (click)="deleteMovie(m.movieId)">Delete</button></td>
+         <td><button class="btn btn-primary" routerLink="/update-movie">Update</button></td>
+        
+        </tr>
+        </tbody>
+        
+    </table>
+</div>

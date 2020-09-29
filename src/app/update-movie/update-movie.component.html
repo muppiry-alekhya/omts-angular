@@ -1,0 +1,86 @@
+
+<div class="col-md-6 offset-md-3"> 
+    <form #userForm="ngForm" (ngSubmit)='onUpdate(userForm.value)'>
+      <br>  <h3 style="color: blue" align="center" >Movie Details</h3>
+
+    <div class="form-group">
+    <b><label>Movie Id</label></b>
+<input required minlength="4" type="number" #tmovieId='ngModel' ngModel placeholder="Enter movie id" name="movieId" ngModel class="form-control">
+<div *ngIf='tmovieId.errors&& tmovieId.touched' class="alert alert-danger">
+  <div [hidden]='!tmovieId.errors.required'>
+    Enter Movie Id
+  </div>
+</div>
+</div>
+
+<div class="form-group">
+  <b><label>Movie Name</label></b>
+<input required minlength="3" type="text" #tmovieName='ngModel' ngModel placeholder="Enter movie name" name="movieName" ngModel class="form-control">
+<div *ngIf='tmovieName.errors&& tmovieName.touched' class="alert alert-danger">
+  <div [hidden]='!tmovieName.errors.required'>
+    Enter Movie Name
+  </div>
+</div>
+</div>
+
+   
+    <div class="form-group">
+<b><label>Genre</label></b>
+<input required minlength="5" type="text" #tmovieGenre='ngModel' ngModel placeholder="Enter genre" name="movieGenre" ngModel class="form-control">
+<div *ngIf='tmovieGenre.errors&& tmovieGenre.touched' class="alert alert-danger">
+  <div [hidden]='!tmovieGenre.errors.required'>
+    Enter Movie Genre
+  </div>
+ </div>
+</div>
+
+
+   <div class="form-group">
+   <b><label>Director</label></b>
+<input required minlength="4" type="text" #tmovieDirector='ngModel' ngModel placeholder="Enter Director" name="movieDirector" ngModel class="form-control">
+<div *ngIf='tmovieDirector.errors&& tmovieDirector.touched' class="alert alert-danger">
+  <div [hidden]='!tmovieDirector.errors.required'>
+    Enter Movie Director
+  </div>
+ </div>
+</div>
+   
+    
+  <div class="form-group">
+<b><label>Length</label></b>
+<input required minlength="2" type="number" #tmovieLength='ngModel' ngModel placeholder="Enter Length" name="movieLength" ngModel class="form-control">
+<div *ngIf='tmovieLength.errors&& tmovieLength.touched' class="alert alert-danger">
+  <div [hidden]='!tmovieLength.errors.required'>
+    Enter Movie Length
+  </div>
+</div>
+</div>
+
+   
+    <div class="form-group">
+      <b><label>Language</label></b>
+      <input required minlength="3" type="text" #tlanguages='ngModel' ngModel placeholder="Enter Language" name="languages" ngModel class="form-control">
+      <div *ngIf='tlanguages.errors&& tlanguages.touched' class="alert alert-danger">
+        <div [hidden]='!tlanguages.errors.required'>
+          Enter Movie Language   
+        </div>
+      </div>
+    </div>
+
+     
+    <div class="form-group">
+<b><label>Release Date</label></b>
+<input type="date" #tmovieReleaseDate='ngModel' name="movieReleaseDate" ngModel class="form-control">
+<div *ngIf='tmovieReleaseDate.errors&& tmovieReleaseDate.touched' class="alert alert-danger">
+  <div [hidden]='!tmovieReleaseDate.errors.required'>
+    Enter Movie Release date
+  </div>
+</div>
+ </div>
+
+
+<input [disabled]="userForm.invalid" type="submit" value="Update Movie" class="btn btn-primary">
+
+      </form>
+  </div>
+  
